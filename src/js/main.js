@@ -9,11 +9,9 @@ const infoAgregadaRender = document.getElementById("infoAgregadaRender")
 
 nuevaConsultaForm.addEventListener("submit",(e)=>{
     e.preventDefault()
-    console.log(e)
 
     // Acceder a los elementos del formulario a través del evento submit
     const elementosFormulario = e.target.elements;
-    console.log(elementosFormulario)   
     
     // valores de los campos
     const nombreDueno = elementosFormulario['nombreDueno'].value;
@@ -21,12 +19,10 @@ nuevaConsultaForm.addEventListener("submit",(e)=>{
     const lugarResidencia = elementosFormulario['lugarResidencia'].value;
     const nombreMascota = elementosFormulario['nombreMascota'].value;
     const tipoMascota = elementosFormulario['tipoMascota'].value;
-    console.log(tipoMascota)
     const motivoConsulta = elementosFormulario['motivoConsulta'].value;
 
     const mascota = new Mascota(nombreDueno, lugarResidencia, telefono, tipoMascota, nombreMascota, motivoConsulta)
 
-    console.log("nueva mascota: ", mascota)
 
     infoAgregadaRender.innerHTML = `
     <ul>
